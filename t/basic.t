@@ -2,6 +2,8 @@ use v6;
 use Test;
 use Subsets::Common;
 
+plan 29;
+
 lives-ok { my PosInt $i = 1; }, "PosInt in range";
 lives-ok { my NegInt $i = -1; }, "NegInt in range";
 lives-ok { my ZeroInt $i = 0; }, "ZeroInt in range";
@@ -36,3 +38,5 @@ dies-ok { my UInt $i = -1; }, "UNumeric caught out of range";
 dies-ok { my NonEmptyStr $s = ''; }, "NonEmptyStr caught out of range";
 dies-ok { my EmptyStr $s = 'hello'; }, "EmptyStr caught out of range";
 dies-ok { my EmptyStr $s = ' '; }, "EmptyStr caught out of range";
+
+done-testing;
