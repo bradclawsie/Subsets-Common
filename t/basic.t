@@ -9,7 +9,7 @@ lives-ok { my NegInt $i = -1; }, "NegInt in range";
 lives-ok { my ZeroInt $i = 0; }, "ZeroInt in range";
 lives-ok { my UInt $i = 1; }, "UInt in range";
 lives-ok { my Int32 $i = 2147483647; }, "Int32 in range";
-lives-ok { my Int32 $i = -2147483647; }, "Int32 in range";
+lives-ok { my Int32 $i = -2147483648; }, "Int32 in range";
 lives-ok { my UInt32 $i = 4294967295; }, "UInt32 in range";
 
 lives-ok { my Pos $i = 1; }, "Pos in range";
@@ -26,7 +26,7 @@ dies-ok { my ZeroInt $i = 1; }, "ZeroInt caught out of range";
 dies-ok { my ZeroInt $i = -1; }, "ZeroInt caught out of range";
 dies-ok { my UInt $i = -1; }, "UInt caught out of range";
 dies-ok { my Int32 $i = 2147483648; }, "Int32 caught out of range";
-dies-ok { my Int32 $i = -2147483648; }, "Int32 caught out of range";
+dies-ok { my Int32 $i = -2147483649; }, "Int32 caught out of range";
 dies-ok { my UInt32 $i = 4294967296; }, "UInt32 caught out of range";
 
 dies-ok { my Pos $i = -1; }, "Pos caught out of range";
