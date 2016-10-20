@@ -7,7 +7,6 @@ my package EXPORT::DEFAULT {
     subset PosInt of Int where * > 0;
     subset NegInt of Int where * < 0;
     subset ZeroInt of Int where * == 0;
-    subset UInt of Int where * >= 0;
     subset Int32 of Int where 2147483647 >= * >= -2147483648;
     subset UInt32 of UInt where * <= 4294967295;
     
@@ -18,5 +17,6 @@ my package EXPORT::DEFAULT {
     
     subset NonEmptyStr of Str where *.chars > 0;
     subset EmptyStr of Str where *.chars == 0;
+    subset ValueStr of Str where /\S/;
 
 }
