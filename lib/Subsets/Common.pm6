@@ -16,11 +16,11 @@ my package EXPORT::DEFAULT {
     subset UInt32 of UInt where * <= 4294967295;
     subset Int64 of Int where 9223372036854775807 >= * >= -9223372036854775808;
     subset UInt64 of UInt where * <= 18446744073709551615;
-    
-    subset Pos of Numeric where * > 0;
-    subset Neg of Numeric where * < 0;
+
+    subset Pos of Real where * > 0;
+    subset Neg of Real where * < 0;
     subset Zero of Numeric where * == 0;
-    subset UNumeric of Numeric where * >= 0;
+    subset UNumeric of Real where * >= 0;
 
     subset Even of Int where * % 2 == 0;
     subset Odd  of Int where * % 2;
