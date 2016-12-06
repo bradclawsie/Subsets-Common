@@ -25,10 +25,10 @@ my package EXPORT::DEFAULT {
     subset Even of Int where * % 2 == 0;
     subset Odd  of Int where * % 2;
 
-    subset Time::Hour12 of PosInt where * ~~ 1 .. 12;
-    subset Time::Hour24 of Int    where * ~~ 0 .. 23;
-    subset Time::Minute of Int    where * ~~ 0 .. 59;
-    subset Time::Second of Int    where * ~~ 0 .. 59;
+    subset Time::Hour12 of PosInt where 1 .. 12;
+    subset Time::Hour24 of Int    where 0 .. 23;
+    subset Time::Minute of Int    where 0 .. 59;
+    subset Time::Second of Int    where 0 .. 59;
 
     subset NonEmptyStr of Str where *.chars > 0;
     subset EmptyStr    of Str where *.chars == 0;
