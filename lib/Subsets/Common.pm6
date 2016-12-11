@@ -7,6 +7,7 @@ my package EXPORT::DEFAULT {
     subset PosInt  of Int where * > 0;
     subset NegInt  of Int where * < 0;
     subset ZeroInt of Int where * == 0;
+    # see UInt in core for Int where *>= 0
 
     subset Int8   of Int  where 127 >= * >= -128;
     subset UInt8  of UInt where * <= 255;
@@ -22,7 +23,7 @@ my package EXPORT::DEFAULT {
     subset Zero     of Numeric where * == 0;
     subset UNumeric of Real    where * >= 0;
 
-    subset Even of Int where * % 2 == 0;
+    subset Even of Int where * %% 2;
     subset Odd  of Int where * % 2;
 
     subset Time::Hour12 of PosInt where 1 .. 12;
