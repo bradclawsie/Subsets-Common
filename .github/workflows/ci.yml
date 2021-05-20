@@ -11,6 +11,4 @@ jobs:
         CI: "1"
     steps:
       - uses: actions/checkout@v2
-      - run: apt-get install -y git
-      - run: zef install Subsets::Common
       - run: prove6 t/basic.rakutest
