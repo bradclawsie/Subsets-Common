@@ -9,4 +9,5 @@
     },
     "depends" : [ ],
     "source-url" : "git://github.com/bradclawsie/Subsets-Common.git"
+    "license" : "BSD-2-Clause"
 }
