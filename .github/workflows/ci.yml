@@ -6,8 +6,8 @@ jobs:
     container:
       image: b7j0c/raku:dev
       env:
-        RAKULIB: "/__w/Net-IP-Parse/Net-IP-Parse/lib"
-        CHECKOUT_PATH: "/__w/Net-IP-Parse/Net-IP-Parse"
+        RAKULIB: "/__w/Subsets-Common/Subsets-Common/lib"
+        CHECKOUT_PATH: "/__w/Subsets-Common/Subsets-Common"
         CI: "1"
     steps:
       - uses: actions/checkout@v2
