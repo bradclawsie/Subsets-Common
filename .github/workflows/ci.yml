@@ -1,0 +1,14 @@
+name: ci
+on: [push]
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    container:
+      image: b7j0c/raku:dev
+      env:
+        RAKULIB: "/__w/Subsets-Common/Subsets-Common/lib"
+        CHECKOUT_PATH: "/__w/Subsets-Common/Subsets-Common"
+        CI: "1"
+    steps:
+      - uses: actions/checkout@v2
+      - run: prove6 t/basic.rakutest
