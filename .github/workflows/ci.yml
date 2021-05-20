@@ -6,9 +6,11 @@ jobs:
     container:
       image: b7j0c/raku:dev
       env:
-        RAKULIB: "/__w/Subsets-Common/Subsets-Common/lib"
-        CHECKOUT_PATH: "/__w/Subsets-Common/Subsets-Common"
+        RAKULIB: "/__w/Net-IP-Parse/Net-IP-Parse/lib"
+        CHECKOUT_PATH: "/__w/Net-IP-Parse/Net-IP-Parse"
         CI: "1"
     steps:
       - uses: actions/checkout@v2
+      - run: apt-get install -y git
+      - run: zef install Subsets::Common
       - run: prove6 t/basic.rakutest
