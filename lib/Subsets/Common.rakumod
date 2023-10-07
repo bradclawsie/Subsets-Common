@@ -1,6 +1,6 @@
 use v6;
 
-unit module Subsets::Common:auth<bradclawsie>:ver<0.0.4>;
+unit module Subsets::Common:auth<bradclawsie>:ver<0.0.5>;
 
 my package EXPORT::DEFAULT {
 
