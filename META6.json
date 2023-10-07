@@ -3,7 +3,7 @@
     "name" : "Subsets::Common",
     "version" : "0.0.5",
     "description" : "Some common subsets to built-in types.",
-    "auth" : "zef:b7j0c",
+    "auth" : "github:bradclawsie",
     "author" : "Brad Clawsie",
     "provides" : {
         "Subsets::Common" : "lib/Subsets/Common.rakumod"
