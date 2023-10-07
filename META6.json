@@ -1,9 +1,9 @@
 {
     "perl" : "6.*",
     "name" : "Subsets::Common",
-    "version" : "0.0.5",
+    "version" : "0.0.6",
     "description" : "Some common subsets to built-in types.",
-    "auth" : "github:bradclawsie",
+    "auth" : "zef:bradclawsie",
     "author" : "Brad Clawsie",
     "provides" : {
         "Subsets::Common" : "lib/Subsets/Common.rakumod"

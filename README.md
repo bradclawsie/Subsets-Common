@@ -9,6 +9,12 @@ The goal is to prevent needless duplication and redefinition of obvious subsets.
 
 Thanks to everyone who has contributed issues and patches.
 
+## Notice
+
+This repository was uploaded via `fez` under the username `b7j0c`,
+and later `bradclawsie`. This change was made so the username would match
+Github. Sorry for any confusion.
+
 ## Installation
 
 ```
