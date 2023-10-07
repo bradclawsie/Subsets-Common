@@ -19,7 +19,7 @@ subtest {
     lives-ok { my Int64 $i = 9223372036854775807; }, "Int64 in range";
     lives-ok { my Int64 $i = -9223372036854775808; }, "Int64 in range";
     lives-ok { my UInt64 $i = 18446744073709551615; }, "UInt64 in range";
-    
+
     lives-ok { my Pos $i = 1; }, "Pos in range";
     lives-ok { my Neg $i = -1; }, "Neg in range";
     lives-ok { my Zero $i = 0; }, "Zero in range";
@@ -42,7 +42,7 @@ subtest {
     dies-ok { my Int64 $i = 9223372036854775808; }, "Int64 caught out of range";
     dies-ok { my Int64 $i = -9223372036854775809; }, "Int64 caught out of range";
     dies-ok { my UInt64 $i = 18446744073709551616; }, "UInt64 caught out of range";
-    
+
     dies-ok { my Pos $i = -1; }, "Pos caught out of range";
     dies-ok { my Neg $i = 1; }, "Neg caught out of range";
     dies-ok { my Zero $i = 1; }, "Zero caught out of range";
@@ -79,13 +79,13 @@ subtest {
     dies-ok { my Time::Hour12 $h = 13 }, "Time::Hour12 dies for 13";
     dies-ok { my Time::Hour12 $h =  0 }, "Time::Hour12 dies for  0";
     dies-ok { my Time::Hour12 $h = -3 }, "Time::Hour12 dies for -3";
-    
+
     for 0 .. 23 -> $hour {
         lives-ok { my Time::Hour24 $h = $hour }, "Time::Hour24 lives for $hour";
     }
     dies-ok { my Time::Hour24 $h = 24 }, "Time::Hour24 dies for 24";
     dies-ok { my Time::Hour24 $h = -3 }, "Time::Hour24 dies for -3";
-    
+
     for 0 .. 59 -> $n {
         lives-ok { my Time::Minute $m = $n }, "Time::Minute lives for $n";
         lives-ok { my Time::Second $s = $n }, "Time::Second lives for $n";
